@@ -1,25 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import BusinessList from "./Components/BusinessList";
+import SearchBar from "./Components/SearchBar";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
-function App() {
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="jumbotron text-center bg-dark-gold">
+      <h1 className="bg-warning p-3">ravenous</h1>
+      <SearchBar />
+      <BusinessList />
     </div>
   );
-}
+};
 
 export default App;
