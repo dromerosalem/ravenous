@@ -1,33 +1,27 @@
 import React from "react";
 import Bussiness from "./Business";
 
-function BusinessList() {
-
+function BusinessList(props) {
+    let propsObject = props.bussines; 
    
     return (
         <div className="container">
         <div className="row">
-            <div className="col-md-4"> 
-                <Bussiness />
-            </div>
-            <div className="col-md-4">
-                <Bussiness />
-            </div>
-            <div className="col-md-4">
-                <Bussiness />
-            </div>
-            <div className="col-md-4">
-                <Bussiness />
-            </div>
-            <div className="col-md-4">
-                <Bussiness />
-            </div>
-            <div className="col-md-4">
-                <Bussiness />
-            </div>
+             
+                {propsObject.map(obj => {
+                   return(
+                    <div className="col-md-4">
+                        <Bussiness key={obj.name} bussisnes={obj}/>
+                    </div>
+                   ) 
+                })}
+            
         </div>
     </div>
     )
 }
 
 export default BusinessList;
+
+
+

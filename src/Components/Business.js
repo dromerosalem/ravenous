@@ -2,20 +2,11 @@ import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
-function Bussiness() {
+function Bussiness(props) {
 
-    let bussiness = {
-        imageSrc: 'https://content.codecademy.com/programs/react/ravenous/pizza.jpg',
-        name: 'MarginOtto Pizzeria',
-        address: '1010 Paddington Way',
-        city: 'Flavortown',
-        state: 'NY',
-        zipCode: '10101',
-        category: 'Italian',
-        rating: 4.5,
-        reviewCount: 90
-    }
 
+    let bussiness = props.bussisnes;
+    console.log(bussiness)
 
 
     return (
@@ -25,10 +16,10 @@ function Bussiness() {
 
             <div className='card-body d-flex justify-content-between'>
                 <div className="adress">
-                    <p className="card-text">{bussiness.address}</p>
-                    <p className="card-text">{bussiness.city}</p>
-                    <p className="card-text">{bussiness.state}</p>
-                    <p className="card-text">{bussiness.zipCode}</p>
+                    <p className="">{bussiness.address}</p>
+                    <p className="">{bussiness.city}</p>
+                    <p className="">{bussiness.state}</p>
+                    <p className="">{bussiness.zipCode}</p>
                 </div>
 
                 <div className="properties">
